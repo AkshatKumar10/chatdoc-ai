@@ -122,3 +122,12 @@ A full-stack, conversational document intelligence platform built with **FastAPI
    Open your browser at `http://localhost:5173`.
 
 ---
+
+## 🔄 CI/CD & Deployment
+
+### Continuous Integration (GitHub Actions)
+The repository includes automated CI via [`.github/workflows/ci.yml`](.github/workflows/ci.yml) that triggers on every push and pull request to `main`:
+- **Backend:** Lints with `flake8` and verifies that all FastAPI/LangChain modules import cleanly on Python 3.11.
+- **Frontend:** Validates clean dependency installation and executes `npm run build` using Node.js 20.
+
+---
