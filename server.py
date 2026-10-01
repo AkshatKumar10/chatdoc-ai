@@ -184,3 +184,7 @@ def clear():
     if os.path.exists(FAISS_INDEX_PATH):
         shutil.rmtree(FAISS_INDEX_PATH)
     return {"message": "Document index cleared successfully."}
+
+@app.get("/")
+def root():
+    return {"message": "ChatDoc AI API is running"}
